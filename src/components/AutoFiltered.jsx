@@ -1,23 +1,7 @@
 import { useState } from "react";
 import React from "react";
 
-const suggestions = [
-  "New York",
-  "Los Angeles",
-  "Chicago",
-  "Houston",
-  "Phoenix",
-  "San Antonio",
-  "San Diego",
-  "Dallas",
-  "San Jose",
-  "Austin",
-  "Maple Street",
-  "Elm Street",
-  "Sunset Boulevard",
-  "Broadway",
-];
-const AutoFiltered = () => {
+const AutoFiltered = ({ suggestions }) => {
   const [input, setInput] = useState("");
   const [FilteredSuggestions, setFilteredSuggestions] = useState([]);
   const handleSuggestionsClick = (e) => {
