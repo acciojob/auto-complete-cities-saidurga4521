@@ -19,7 +19,7 @@ const AutoFiltered = ({ suggestions }) => {
   };
   return (
     <div className="autocomplete-container">
-      <label for="Address">Enter Address</label>
+      <label htmlFor="Address">Enter Address</label>
       <input
         type="text"
         id="Address"
