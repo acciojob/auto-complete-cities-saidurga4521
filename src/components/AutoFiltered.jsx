@@ -5,9 +5,11 @@ const AutoFiltered = ({ suggestions }) => {
   const [input, setInput] = useState("");
   const [FilteredSuggestions, setFilteredSuggestions] = useState([]);
   const handleSuggestionsClick = (e) => {
-    setInput(e.target.value);
+    const value = e.target.value;
+    setInput(value);
+
     const matches = suggestions.filter((sugg) =>
-      sugg.toLowerCase().startsWith(input.toLowerCase())
+      sugg.toLowerCase().startsWith(value.toLowerCase())
     );
     setFilteredSuggestions(matches);
   };
