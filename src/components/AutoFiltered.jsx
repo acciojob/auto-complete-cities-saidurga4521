@@ -4,7 +4,7 @@ import React from "react";
 const AutoFiltered = ({ suggestions }) => {
   const [input, setInput] = useState("");
   const [FilteredSuggestions, setFilteredSuggestions] = useState([]);
-  const handleSuggestionsClick = (e) => {
+  const handleInputChange = (e) => {
     const value = e.target.value;
     setInput(value);
 
@@ -24,7 +24,7 @@ const AutoFiltered = ({ suggestions }) => {
         type="text"
         id="Address"
         value={input}
-        onChange={handleSuggestionsClick}
+        onChange={handleInputChange}
       />
       {input && FilteredSuggestions.length > 0 && (
         <ul className="suggestions">
