@@ -3,7 +3,7 @@ import React from "react";
 
 const AutoFiltered = ({ suggestions }) => {
   const [input, setInput] = useState("");
-  const [FilteredSuggestions, setFilteredSuggestions] = useState([]);
+  const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const handleInputChange = (e) => {
     const value = e.target.value;
     setInput(value);
@@ -26,9 +26,9 @@ const AutoFiltered = ({ suggestions }) => {
         value={input}
         onChange={handleInputChange}
       />
-      {input && FilteredSuggestions.length > 0 && (
+      {input && filteredSuggestions.length > 0 && (
         <ul className="suggestions">
-          {FilteredSuggestions.map((sugg, index) => (
+          {filteredSuggestions.map((sugg, index) => (
             <li
               key={index}
               onClick={() => {
