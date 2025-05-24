@@ -12,10 +12,10 @@ const suggestions = [
   "Dallas",
   "San Jose",
   "Austin",
-  "Maple Street",
   "Elm Street",
   "Sunset Boulevard",
   "Broadway",
+  "Mumbai",
 ];
 const App = () => {
   return (
